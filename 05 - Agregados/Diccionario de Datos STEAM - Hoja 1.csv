@@ -1,0 +1,29 @@
+steam_games.gz.json,,
+Columna,Descripción,Ejemplo
+publisher,Empresa publicadora del contenido,"[Ubisoft,Dovetail Games - Trains,Degica]"
+genres,Genero del contenido,"[Action, Adventure, Racing, Simulation, Strategy]"
+app_name,Nombre del contenido,"[Warzone, Soundtrack, Puzzle Blocks]"
+title,Titulo del contenido,"[The Dream Machine: Chapter 4 , Fate/EXTELLA - Sweet Room Dream, Fate/EXTELLA - Charming Bunny]"
+url,URL de publicación del contenido,http://store.steampowered.com/app/761140/Lost_Summoner_Kitty/
+release_date,Fecha de lanzamiento,[2018-01-04]
+tags,etiquetas de contenido,"[Simulation, Indie, Action, Adventure, Funny, Open World, First-Person, Sandbox, Free to Play]"
+discount_price,precio de descuento,"[22.66, 0.49, 0.69]"
+reviews_url,Reviews de contenido,http://steamcommunity.com/app/681550/reviews/?browsefilter=mostrecent&p=1
+specs,Especificaciones,"[Multi-player, Co-op, Cross-Platform Multiplayer, Downloadable Content]"
+price,Precio del contenido,"[4.99, 9.99, Free to Use, Free to Play]"
+early_access,acceso temprano,"[False, True]"
+id,identificador unico de contenido,"[761140, 643980, 670290]"
+developer,Desarrollador,"[Kotoshiro, Secret Level SRL, Poolians.com]"
+metascore,Score por metacritic,"[80, 74, 77, 75]"
+,,
+user_reviews.gz.json,,
+Columna,Descripción,Ejemplo
+user_id,identificador unico de usuario,"[76561197970982479, evcentric, maplemage]"
+user_url,URL perfil del usuario,http://steamcommunity.com/id/evcentric
+reviews,Review de usuario en formato Json,"{'funny': '', posted': 'Posted September 8, 2013.','last_edited': '','item_id': '227300','helpful': '0 of 1 people (0%) found this review helpful','recommend': True,'review': ""For a simple (it's actually not all that simple but it can be!) truck driving Simulator, it is quite a fun and relaxing game. Playing on simple (or easy?) its just the basic WASD keys for driving but (if you want) the game can be much harder and realistic with having to manually change gears, much harder turning, etc. And reversing in this game is a ♥♥♥♥♥, as I imagine it would be with an actual truck. Luckily, you don't have to reverse park it but you get extra points if you do cause it is bloody hard. But this is suprisingly a nice truck driving game and I had a bit of fun with it.""},"
+,,
+user_items.gz.json,,
+Columna,Descripción,Ejemplo
+user_id,identificador unico de usuario,"[76561197970982479, evcentric, maplemage]"
+user_url,URL perfil del usuario,http://steamcommunity.com/id/evcentric
+items,Items de usuario en formato Json,"{'item_id': '273350', 'item_name': 'Evolve Stage 2', 'playtime_forever': 58, 'playtime_2weeks': 0}"
