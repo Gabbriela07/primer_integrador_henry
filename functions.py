@@ -24,22 +24,38 @@ import os
 
 
 def PlayTimeGenre(genero: str):
-    result_df = pd.read_csv('PlayTimeGenre.csv')
+    try:
+        result_df = pd.read_csv('PlayTimeGenre.csv')
 
-    # Filtrar el DataFrame para el género específico
-    filtered_df = result_df[result_df['genres'] == genero]
-    
-    # Agrupar por año de lanzamiento y sumar las horas jugadas
-    grouped_df = filtered_df.groupby('year')['hours_game'].sum()
-    
-    # Encontrar el año con más horas jugadas
-    max_hours_year = grouped_df.idxmax()
+        # Filtrar el DataFrame para el género específico
+        filtered_df = result_df[result_df['genres'] == genero]
+        
+        # Asegúrate de que haya datos disponibles antes de intentar calcular el máximo
+        if filtered_df.empty:
+            return {"mensaje": f"No hay datos disponibles para el género '{genero}'."}
 
-    # Construye el response_data
-    response_data = {"Año de lanzamiento con más horas jugadas para {}: {}".format(genero, max_hours_year)}
+        # Agrupar por año de lanzamiento y sumar las horas jugadas
+        grouped_df = filtered_df.groupby('year')['hours_game'].sum()
+        
+        # Asegúrate de que grouped_df no sea vacío antes de intentar calcular el máximo
+        if grouped_df.empty:
+            return {"mensaje": f"No hay datos disponibles para el género '{genero}'."}
 
-    # Muestra el resultado
-    return response_data
+        # Encontrar el año con más horas jugadas
+        max_hours_year = grouped_df.idxmax()
+
+        # Construye el response_data
+        response_data = {"Año de lanzamiento con más horas jugadas para {}: {}".format(genero, max_hours_year)}
+
+        # Muestra el resultado
+        return response_data
+
+    except FileNotFoundError as e:
+        raise HTTPException(status_code=500, detail=f"Error al cargar el archivo PlayTimeGenre.csv: {str(e)}")
+    except Exception as e:
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Error interno del servidor: {str(e)}")
+
 
 
 # ### Endpoint 2
