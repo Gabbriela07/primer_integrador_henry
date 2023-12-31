@@ -1,4 +1,4 @@
-![STEAM](2.png)
+![STEAM](fondo_proyecto.png)
 
 # Proyecto MLOps: Sistema de Recomendación de Videojuegos para Usuarios de Steam
 
